@@ -1,22 +1,34 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './Navigation.css';
 
 class Navigation extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      tab1: '',
+      tab2: '',
+      tab3: '',
+      tab4: '',
+    }
+  }
+
   render() {
+    debugger
     return (
       <nav className="navigation">
         <ul>
           <li>
-            <a href="#tab1" refs="tab1">Tab 1</a>
+            <a href="#tab1" onClick = {this.clearInput}>Tab 1</a>
           </li>
           <li>
-            <a href="#tab2" ref="tab2">Tab 2</a>
+            <a href="#tab2" onClick = {this.clearInput}>Tab 2</a>
           </li>
           <li>
-            <a href="#tab3" ref="tab3">Tab 3</a>
+            <a href="#tab3" onClick = {this.clearInput}>Tab 3</a>
           </li>
           <li>
-            <a href="#tab4" ref="tab4">Tab 4</a>
+            <a href="#tab4" onClick = {this.clearInput}>Tab 4</a>
           </li>
         </ul>
       </nav>
